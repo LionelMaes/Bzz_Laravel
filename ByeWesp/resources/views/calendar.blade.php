@@ -8,7 +8,7 @@
             <h3><a href="?ym=<?php echo $prev; ?>"><</a> <?php echo $html_title ?> <a
                         href="?ym=<?php echo $next; ?>">></a>
             </h3>
-            <a id="back2day" href="RendezVous.php?ym=<?php echo date('Y-m') ?>">Retour a aujourd'hui</a>
+            <a id="back2day" href="/calendar?ym=<?php echo date('Y-m') ?>">Retour a aujourd'hui</a>
             <br>
             <table class="table table-boarder">
                 <tr>

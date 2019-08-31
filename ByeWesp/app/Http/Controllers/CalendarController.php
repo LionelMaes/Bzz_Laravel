@@ -11,20 +11,20 @@ namespace App\Http\Controllers;
 use App\Http\Controllers\Controller;
 
 
+
 class CalendarController extends Controller
 {
-
     public function createCalendar()
     {
-        //look if the date was send with the link
         date_default_timezone_set("Europe/Brussels");
-        if ($ym == null) {
+        if (isset($_GET['ym'])) {
+            $ym = $_GET['ym'];
+        } else {
             $ym = date('Y-m');
         }
-
         if (isset($_GET['day'])) {
             $rdvDay = $_GET['day'];
-        } else {
+        }else{
             $rdvDay = null;
         }
 
@@ -60,8 +60,7 @@ class CalendarController extends Controller
             if ($today == $date) {
                 $week .= '<td class="today">' . $day;
             } else {
-//                $week .= '<td><a href="RendezVous.php?ym=' . $ym . '&day=' . $day . '-' . date('m-Y', $timeStamp) . '">' . $day;
-                $week .= '<td><a href="/calendar{' . $ym . '}&{' . $day . '-' . date('m-Y', $timeStamp) . '}">' . $day;
+                $week .= '<td><a href="calendar?ym=' . $ym . '&day=' . $day . '-' . date('m-Y', $timeStamp) . '">' . $day;
             }
             $week .= "</td>";
 
@@ -74,6 +73,6 @@ class CalendarController extends Controller
                 $week = '';
             }
         }
-        return view('calendar', ['weeks' => $weeks, 'prev' => $prev, 'next' => $next, 'html_title' => $html_title, 'rdvDay' => $rdvDay]);
+        return view('calendar',['weeks'=>$weeks,'prev'=> $prev, 'next'=>$next,'html_title'=>$html_title,'rdvDay'=>$rdvDay]);
     }
 }

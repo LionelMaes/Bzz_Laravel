@@ -1,0 +1,100 @@
+body {
+    margin: 0px;
+    padding: 0px;
+}
+
+header {
+    height: 5%;
+    background-color: antiquewhite;
+    padding-bottom: 5px;
+    padding-top: 5px;
+    margin: 0px;
+}
+
+header h1 {
+    margin-left: 45%;
+    margin-top: 0px;
+}
+
+header li {
+    display: inline-block;
+    margin-left: 11%;
+}
+
+.first h2 {
+    margin-left: 45%;
+}
+
+.first p {
+    width: 30%;
+    margin-left: 35%;
+}
+
+.rdv h1 {
+    margin-left: 43%;
+}
+
+.rdv a {
+    color: black;
+}
+
+.calender h3 {
+    margin-bottom: 0;
+}
+
+.calender table {
+    width: 50%;
+    margin-left: 25%;
+    margin-top: 2%;
+}
+
+.calender h3 {
+    margin-left: 25%;
+    display: inline;
+}
+
+#back2day {
+    margin-left: 5%;
+    font-size: x-large;
+    text-decoration: underline;
+}
+
+.table {
+    border-collapse: collapse;
+}
+
+.table th {
+    border: darkgray 2px solid;
+    width: 10%;
+}
+
+.table td {
+    text-align: center;
+    border: black 1px solid;
+    padding: 8px;
+}
+
+.today {
+    background-color: darkslategray;
+    color: white;
+}
+
+.calender a {
+    text-decoration: none;
+}
+
+.rdvContainer {
+    margin-top: 5%;
+    margin-bottom: 8%;
+}
+
+.rdvContainer th {
+    padding: 10px;
+}
+
+.rdvContainer table {
+    width: 50%;
+    margin-left: 25%;
+}
+
+

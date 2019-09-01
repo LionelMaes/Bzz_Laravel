@@ -14,4 +14,5 @@ class Appointment extends Model
         }
         return $session->get('posts');
     }
+    class
 }

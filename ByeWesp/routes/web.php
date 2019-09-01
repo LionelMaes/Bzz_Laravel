@@ -15,7 +15,17 @@ Route::get('/', function () {
     return view('welcome');
 });
 
-Route::get('/home', function(){return view('home');});
+Route::get('/home', function () {
+    return view('home');
+});
 
-Route::get('/calendar{id}&{rdvDay}','CalendarController@createCalendar')->name('calendar');
-Route::get('/calendar','CalendarController@createCalendar')->name('calendar');
+Route::get('/calendar{id}&{rdvDay}', 'CalendarController@createCalendar')->name('calendar');
+Route::get('/calendar', 'CalendarController@createCalendar')->name('calendar');
+Route::get('/homeBzz', function () {
+    return view('start');
+})->name('start');
+
+
+Auth::routes(['verify' => true]);
+
+Route::get('/home', 'HomeController@index')->name('home');

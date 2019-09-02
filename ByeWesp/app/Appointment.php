@@ -6,7 +6,7 @@ use Illuminate\Database\Eloquent\Model;
 
 class Appointment extends Model
 {
-    protected $fillable =['username','date'];
+    protected $fillable =['name','date'];
 
     public function getPosts($session){
         if (!$session->has('posts')){
@@ -14,5 +14,4 @@ class Appointment extends Model
         }
         return $session->get('posts');
     }
-    class
 }

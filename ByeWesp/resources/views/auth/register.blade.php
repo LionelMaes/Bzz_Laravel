@@ -61,6 +61,17 @@
                             </div>
                         </div>
 
+                        <div class="form-group row">
+                            <label for="phonenumber" class="col-md-4 col-form-label text-md-right">{{ __('phonenumber') }}</label>
+
+                            <div class="col-md-6">
+                                <input id="phonenumber" type="tel" class="form-control" name="phonenumber" required autocomplete="new-phonenumber">
+                            </div>
+                        </div>
+
+                        <input type="hidden" value="0" name="privilege">
+
+
                         <div class="form-group row mb-0">
                             <div class="col-md-6 offset-md-4">
                                 <button type="submit" class="btn btn-primary">

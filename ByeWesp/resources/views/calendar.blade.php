@@ -38,7 +38,7 @@
                 $min = 30;
                 //create cells for the table
                 for ($i = 0; $i < 10; $i++) {
-                    $rdvTable .= '<tr><td>' . $hour . ':' . $min . '</td></tr>';
+                    $rdvTable .= '<tr><td><a href="calendar?ym=' . $ym . '&day=' . $day . '-' . date('m-Y', $timeStamp) . '&hour=' . $hour . ':' . $min . '">' . $hour . ':' . $min . '</a></td></tr>';
 
                     //change time
                     if ($i % 2 == 0) {
@@ -55,5 +55,24 @@
             }
             ?>
         </div>
+        <?php if (isset($_GET['hour'])){$hour = $_GET['hour'];}?>
+        @if($hour != null)
+            <div class="formRdv">
+                <h1> Prendre rendez-vous</h1>
+                <form action="takeAppointment">
+                    <div class="form-group row">
+                        <label for="hour">A quelle heure:</label>
+                        <input type="time" name="hour" value="{{$hour}}">
+                    </div>
+                    <div class="form-group row">
+                        <label for="name">Name:</label>
+                        <input type="text" name="name">
+                    </div>
+                    <div class="form-group row">
+                        <button type="submit" class="btn-primary btn">Submit</button>
+                    </div>
+                </form>
+            </div>
+        @endif
     </main>
 @endsection

@@ -73,6 +73,7 @@ class CalendarController extends Controller
                 $week = '';
             }
         }
-        return view('calendar',['weeks'=>$weeks,'prev'=> $prev, 'next'=>$next,'html_title'=>$html_title,'rdvDay'=>$rdvDay]);
+        return view('calendar',['weeks'=>$weeks,'prev'=> $prev, 'next'=>$next,'html_title'=>$html_title,'rdvDay'=>$rdvDay,'ym' => $ym,'day'=>$day,'timeStamp'=>$timeStamp]);
     }
+
 }
